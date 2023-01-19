@@ -1,6 +1,16 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
+router.get('/:id', async (req, res) => {
+  try {
+    const userData = await User.findByPk(req.params.id);
+    res.json(userData);
+  } catch (err) {
+    console.error(err);
+    res.json(err);
+  }
+});
+
 router.get('/', async (req, res) => {
   try {
     const userData = await User.findAll();
