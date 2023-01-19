@@ -1,16 +1,14 @@
-
-
 <body>
-  <nav>
-    <a href="/">Home</a>
+  <nav class="fs-4 bg-dark">
+    <a class="m-3" href="/">Home</a>
     <!-- If the user is logged in, show a logout button -->
     {{#if loggedIn}}
     <button id="logout" class="btn-no-style">Logout</button>
     {{else}}
     <!-- Otherwise, show a link to login -->
-    <a href="/login">Login</a>
+    <a class="m-3" href="/login">My Account</a>
     {{/if}}
-    <a href="/signup">Sign Up</a>
+    <a class="m-3" href="/signup">Sign Up</a>
   </nav>
   
   <!-- If the user is logged in, load the JS script for when they logout -->
@@ -33,13 +31,13 @@
 </head>
 
 <body>
-  <header class="p-5 mb-4 bg-light">
+  <header class="p-5 mb-4">
     <div class="container">
       <!-- Add classes for a row and align items to the bottom -->
       <div class="row align-items-end">
         <!-- Add classes to create a column that spans full width on mobile and half width on larger screens -->
         <div class="col-12 col-lg-6">
-          <img class="money" src="./money.jpg" alt="moneybags" />
+          <img class="money" src="../images/money.png" alt="moneybags" />
         </div>
         <!-- Add classes to create a column that spans full width on mobile and half width on larger screens -->
         <div class="col-12 col-lg-6">
