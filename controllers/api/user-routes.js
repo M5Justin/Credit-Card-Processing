@@ -1,19 +1,5 @@
 const router = require('express').Router();
 const { User } = require('../../models');
-<<<<<<< HEAD
-
-router.get('/:id', async (req, res) => {
-  try {
-    const userData = await User.findByPk(req.params.id);
-    res.json(userData);
-  } catch (err) {
-    console.error(err);
-    res.json(err);
-  }
-});
-
-=======
->>>>>>> e64883e0b0a9cab7ec212c8323bd0f71003fab30
 router.get('/', async (req, res) => {
   try {
     const userData = await User.findAll();
