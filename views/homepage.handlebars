@@ -1,22 +1,3 @@
--- Active: 1674066444187@@127.0.0.1@3301
-<body>
-  <nav class="fs-4 bg-dark">
-    <a class="m-3" href="/">Home</a>
-    <!-- If the user is logged in, show a logout button -->
-    {{#if loggedIn}}
-    <button id="logout" class="btn-no-style">Logout</button>
-    {{else}}
-    <!-- Otherwise, show a link to login -->
-    <a class="m-3" href="/login">My Account</a>
-    {{/if}}
-    <a class="m-3" href="/signup">Sign Up</a>
-  </nav>
-  
-  <!-- If the user is logged in, load the JS script for when they logout -->
-  {{#if loggedIn}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
-</body>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -32,6 +13,19 @@
 </head>
 
 <body>
+  <nav class="fs-4 bg-dark">
+    <a class="m-3" href="/">Home</a>
+    <!-- If the user is logged in, show a logout button -->
+    
+    
+    <!-- Otherwise, show a link to login -->
+    <a class="m-3" href="/login">My Account</a>
+    
+    <a class="m-3" href="/signup">Sign Up</a>
+    
+    <a id="logout" class="btn-no-style" href="/">Logout</a>
+    
+  </nav>
   <header class="p-5 mb-4">
     <div class="container">
       <!-- Add classes for a row and align items to the bottom -->
@@ -48,6 +42,12 @@
       </div>
     </div>
   </header>
+
+  
+  <!-- If the user is logged in, load the JS script for when they logout -->
+  {{#if loggedIn}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
 
   <main class="container my-3">
     <!-- Add a class to create a row -->
