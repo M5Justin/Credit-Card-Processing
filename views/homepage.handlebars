@@ -1,6 +1,4 @@
 
-
-
 <body>
   <nav class="fs-4 bg-dark">
     <a class="m-3" href="/">Home</a>
@@ -53,6 +51,24 @@
           ipsa sed iure dolorum! Tenetur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptatem
           dolorum earum esse recusandae facere aliquam. Excepturi facilis sint nesciunt ipsa, eveniet facere in quidem
           voluptas exercitationem distinctio commodi laborum!</p>
+  <link rel="stylesheet" href="../public/css/style.css">
+  <title>Bootstrap Layouts</title>
+</head>
+
+<body>
+  <header class="p-5 mb-4">
+    <div class="container">
+      <!-- Add classes for a row and align items to the bottom -->
+      <div class="row align-items-end">
+        <!-- Add classes to create a column that spans full width on mobile and half width on larger screens -->
+        <div class="col-12 col-lg-6">
+          <img class="money" src="../images/money.png" alt="moneybags" />
+        </div>
+        <!-- Add classes to create a column that spans full width on mobile and half width on larger screens -->
+        <div class="col-12 col-lg-6">
+          <h1>Bottom Line Financial Encryption</h1>
+          <p>With the global economy being as tumultuous as it is, the last thing anybody wants to worry about is their financial information getting hacked. With Bottom Line, your worries will be encrypted away and placed inside the safety server named relaxation.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -111,27 +127,35 @@
                 quisquam ipsam ipsum. Magnam ut quibusdam facilis consequatur veritatis, ullam molestiae, inventore
                 neque,
                 quas obcaecati laborum?
+                <div class="dropdown">
+  <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+    Dropdown form
+  </button>
+  <form class="dropdown-menu p-4">
+    <div class="mb-3">
+      <label for="exampleDropdownFormEmail2" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@example.com">
+    </div>
+    <div class="mb-3">
+      <label for="exampleDropdownFormPassword2" class="form-label">Password</label>
+      <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
+    </div>
+    <div class="mb-3">
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="dropdownCheck2">
+        <label class="form-check-label" for="dropdownCheck2">
+          Remember me
+        </label>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Sign in</button>
+  </form>
+</div>
               </p>
-            </div>
+               </div>
           </div>
         </div>
-      </section>
-    </div>
 
-    <!-- Add classes to create a column that spans full width on mobile and 1/4 on larger screens -->
-    <div class="col-12 col-lg-3">
-      <h2>About Us</h2>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. A deleniti illo amet veniam. Enim dignissimos sint,
-        modi voluptate libero corporis ipsa consectetur commodi dolorum dolores vitae? Odit perspiciatis iure placeat.
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam, neque ab doloremque, harum corporis
-        voluptas explicabo amet culpa, odit autem totam itaque voluptatibus ipsa quos aperiam eius vel? Commodi,
-        nesciunt.
-      </p>
-    </div>
-  </section>
-
-  <hr />
 
   <!-- Add classes to create a center-justified row -->
   <section class="row justify-content-center">
