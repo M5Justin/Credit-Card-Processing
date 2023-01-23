@@ -8,13 +8,9 @@
 </head>
 
 <body>
-  <header class="display-flex justify-space-between align-center p-2">
-    
-    {{#if loggedIn}}
-    <nav>
-      <button class="btn" id="logout">logout</button>
-    </nav>
-    {{/if}}
+    <nav class="fs-4 bg-dark">
+
+  </nav>
   </header>
   <main class="container container-fluid mt-5">
     {{{ body }}}
@@ -23,7 +19,7 @@
       
   </footer>
 
-  {{#if logged_in}}
+  {{#if loggedIn}}
   <script src="/js/logout.js"></script>
   {{/if}}
 </body>
