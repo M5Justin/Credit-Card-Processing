@@ -1,5 +1,38 @@
-header, .project:not(:last-child) {
-  border-bottom: 1px solid #ccc;
+:root {
+  --dark: #0c5a19;
+  --light: #4da86b;
+}
+
+nav {
+  text-align: justify content center;
+  font-size: 20px;
+  font-weight: 900;
+  color: green;
+	background: grey;
+}
+
+footer {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: auto;
+
+}
+
+header {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 900;
+  color: white;
+  padding: 20px;
+	background: linear-gradient(to left,var(--dark) 47%, var(--light) 100%);
+
+}
+
+
+.project:not(:last-child) {
+  border-bottom: 1px solid rgb(143, 141, 141);
 }
 
 .no-button {
@@ -7,14 +40,13 @@ header, .project:not(:last-child) {
   border: none;
   padding: 0;
   cursor: pointer;
-  color: #1b89bc;
+  color: #1bbc5e;
   text-decoration: none;
   font-size: 100%;
 }
 
 .no-button:hover {
-  color: #065b83;
-  text-decoration: underline;
+  color: #d10a0a;
 }
 
 .dollar-amount {
@@ -22,3 +54,4 @@ header, .project:not(:last-child) {
   font-weight: bold;
   margin-left: -5px;
 }
+
