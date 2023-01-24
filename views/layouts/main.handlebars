@@ -11,22 +11,20 @@
 
 
 <body>
-
   <header class="display-flex justify-space-between align-center p-2">
     <div class="row w-100 text-center">
       <h1>Bottom Line Financial Encryption</h1>
     </div>
   </header>
-
-  <nav class="display-flex justify-space-between align-center p-2">
-    <ul class="nav justify-content-center">
+  <nav class="p-3">
+    <ul class="nav justify-content-center p-3">
       <li>
-        <a href="/">Home</a>
+        <a class="p-2" href="/">Home</a>
       </li>
       <li>
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <a href="/profile">Profile</a>
+        <a class="p-2" href="/profile">Profile</a>
         <button class="no-button" id="logout">Logout</button>
         {{else}}
         <a href="/login">Login</a>
@@ -37,7 +35,6 @@
   <!-- Render the sub layout -->
   <main class="container container-fluid mt-5">
     {{{ body }}}
-
   </main>
 </body>
 
