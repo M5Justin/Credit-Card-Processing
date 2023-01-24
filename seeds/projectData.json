@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "number": 2659,
+    "amount": 23,
+    "expiration": 5000
+  },
+  {
+    "id": 2,
+    "number": 8815,
+    "amount": 55,
+    "expiration": 10000
+  },
+  {
+    "id": 3,
+    "number": 5210,
+    "amount": 90,
+    "expiration": 800
+  }
+]

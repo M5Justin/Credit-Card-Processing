@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
+
 router.get('/', async (req, res) => {
   try {
     const userData = await User.findAll();
@@ -10,35 +11,25 @@ router.get('/', async (req, res) => {
     res.json(err);
   }
 });
-router.get('/:id', async (req, res) => {
-  try {
-    const userData = await User.findByPk(req.params.id);
-    res.json(userData);
-  } catch (err) {
-    console.error(err);
-    res.json(err);
-  }
-});
+
 router.post('/', async (req, res) => {
   try {
-    const newUser = await User.create({
-      username: req.body.username,
-      password: req.body.password,
-    });
+    const userData = await User.create(req.body);
+
     req.session.save(() => {
-      req.session.userId = newUser.id;
-      req.session.username = newUser.username;
-      req.session.loggedIn = true;
-      res.json(newUser);
+      req.session.user_id = userData.id;
+      req.session.logged_in = true;
+
+      res.status(200).json(userData);
     });
   } catch (err) {
-    res.status(500).json(err);
+    res.status(400).json(err);
   }
 });
 
 router.post('/login', async (req, res) => {
   try {
-    const userData = await User.findOne({ where: { username: req.body.username } });
+    const userData = await User.findOne({ where: { email: req.body.email } });
 
     if (!userData) {
       res
@@ -58,7 +49,7 @@ router.post('/login', async (req, res) => {
 
     req.session.save(() => {
       req.session.user_id = userData.id;
-      req.session.loggedIn = true;
+      req.session.logged_in = true;
       
       res.json({ user: userData, message: 'You are now logged in!' });
     });
@@ -69,7 +60,7 @@ router.post('/login', async (req, res) => {
 });
 
 router.post('/logout', (req, res) => {
-  if (req.session.loggedIn) {
+  if (req.session.logged_in) {
     req.session.destroy(() => {
       res.status(204).end();
     });
@@ -77,4 +68,5 @@ router.post('/logout', (req, res) => {
     res.status(404).end();
   }
 });
+
 module.exports = router;
