@@ -15,6 +15,7 @@
   <header class="display-flex justify-space-between align-center p-2">
     <div class="row w-100 text-center">
       <h1>Bottom Line Financial Encryption</h1>
+    </div>
   </header>
 
   <nav class="display-flex justify-space-between align-center p-2">
@@ -36,9 +37,12 @@
   <!-- Render the sub layout -->
   <main class="container container-fluid mt-5">
     {{{ body }}}
+
+  </main>
 </body>
+
 <!-- Our Footer will always be at the bottom of our webpage-->
-<footer class="text-center row-100vh">
+<footer class="mt-5 text-center d-flex flex-column min-vh-1000">
   <h2>Bottom Line Security</h2>
 
   <h3>
@@ -83,7 +87,7 @@
 
   </section>
 </footer>
-</div>
+
 
 <!-- Render script for logged in users only -->
 {{#if logged_in}}
@@ -92,4 +96,3 @@
 
 
 </html>
-  </main>
