@@ -21,7 +21,7 @@ a:hover { text-decoration: none; }
 a:active { text-decoration: none; }
 
 footer {
-  position: absolute;
+  position: relative;
   right: 0;
   left: 0;
   bottom: 0;
