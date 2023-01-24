@@ -1,7 +1,7 @@
 <!-- Loop over each object in the projects array -->
 <div>
   <h1>
-    Recent Transactions:
+    Previous Transactions:
   </h1>
 </div>
 {{#each projects as |project| }}
@@ -10,13 +10,13 @@
   <div class="col-md-5">
     <h2>
       <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-      <h3>Last 4:</h3>
+      <h3>Last 4#:</h3>
       <a href="/project/{{project.id}}">{{project.number}}</a>
     </h2>
 
 
   </div>
-  <div class="col-md-7">
+  <div class="col-md-7 pd-5px">
     <p>
       <span for="img" aria-label="money">💲</span>
       <span class="dollar-amount">{{format_amount amount}}</span>
