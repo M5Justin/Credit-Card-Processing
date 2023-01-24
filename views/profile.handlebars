@@ -1,0 +1,48 @@
+<div class="row">
+  <div class="col-auto">
+    <h2>Welcome, {{name}}!</h2>
+  </div>
+</div>
+
+<div class="row mt-4">
+  <div class="col-md-6">
+    <h3>New Transaction:</h3>
+
+    <form class="form new-project-form">
+      <div class="form-group">
+        <label>Last 4 Digits:</label>
+        <input class="form-input" type="number" id="number"  />
+      </div>
+      <div class="form-group">
+        <label for="expiration">Expiration:</label>
+        <input class="form-input" type="text" id="expiration" />
+      </div>
+      <div class="form-group">
+        <label for="amount">Amount:</label>
+        <textarea class="form-input" id="amount" ></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Create</button>
+      </div>
+    </form>
+  </div>
+
+  {{#if projects.length}}
+  <div class="col-md-6 project-list">
+    <h3>New Transactions:</h3>
+
+    {{#each projects as |project|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/project/{{project.id}}">{{project.number}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-warning" data-id="{{project.id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>
+
+<script src="./js/profile.js"></script>
