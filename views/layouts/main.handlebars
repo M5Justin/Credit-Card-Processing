@@ -19,12 +19,12 @@
   <nav class="p-3">
     <ul class="nav p-3">
       <li>
-        <a class="p-2" href="/">Home</a>
+        {{#if logged_in}}
+        <a class="p-2" href="/">Profile</a>
       </li>
       <li>
         <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <a class="p-2" href="/profile">Profile</a>
+        <a class="p-2" href="/profile">Account</a>
         <button class="no-button" id="logout">Logout</button>
         {{else}}
         <a href="/login">Login</a>
