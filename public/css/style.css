@@ -16,7 +16,7 @@ nav:hover {
 }
 
 h1 {
-  color: beige;
+  color: whitesmoke;
 }
 
 a {
@@ -24,7 +24,7 @@ a {
 }
 
 body {
-  background-color: gray;
+  background-color: rgb(32, 32, 32);
 }
 a:link { text-decoration: none; }
 a:visited { text-decoration: none; }
@@ -37,7 +37,7 @@ footer {
   left: 0;
   bottom: 0;
   height: auto;
-
+  color: whitesmoke;
 }
 
 header {
