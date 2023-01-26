@@ -7,37 +7,39 @@
 <div class="row mb-3 mt-4">
   <div class="col-md-6">
     <h3>New Transaction:</h3>
-
-    <form class="form new-project-form">
-      <div class="mb-3 form-group">
+     <div class="card" style="width: 20rem;">
+    <form class="form new-project-form border border-dark">
+      <div class="mb-3 form-group m-2">
         <label for="Last 4 Digits">Last 4 Digits:</label>
         <input class="form-input" type="number" id="number"  />
       </div>
-      <div class="mb-3 form-group">
+      <div class="mb-3 form-group text-center">
         <label for="expiration">Expiration:</label>
         <input class="form-input" type="text" id="expiration" />
       </div>
-      <div class="mb-3 form-group">
+      <div class="mb-3 form-group text-center">
         <label for="amount">Amount:</label>
         <input class="form-input" id="amount" ></input>
       </div>
-      <div class="form-group">
+      <div class="form-group text-center mb-2">
         <button type="submit" class="btn btn-primary">Create</button>
       </div>
     </form>
+     </div>
   </div>
 
   {{#if projects.length}}
   <div class="col-md-6 project-list">
-    <h3>New Transactions:</h3>
+    <h3 class="text-decoration-underline">New Transactions:</h3>
+     <div class="card" style="width: 20rem;"></div>
 
     {{#each projects as |project|}}
     <div class="row mb-2">
-      <div class="col-md-8">
+      <div class="col-md-8 border border-dark">
         <h4><a class= "text-primary" href="/project/{{project.id}}">{{project.number}}</a></h4>
       </div>
       <div class="col-md-4">
-        <button class="btn btn-sm btn-warning" data-id="{{project.id}}">DELETE</button>
+        <button class="btn btn-sm mt-1 btn-warning" data-id="{{project.id}}">DELETE</button>
       </div>
     </div>
     {{/each}}
