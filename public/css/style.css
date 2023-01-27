@@ -14,6 +14,7 @@ nav {
 
 a {
   color: white;
+
 }
 
 a:link { text-decoration: none; }
@@ -27,6 +28,9 @@ footer {
   left: 0;
   bottom: 0;
   height: auto;
+  background-color: #4c4d4c;
+  color:white;
+  font-family: 'Times New Roman', Times, serif;
 
 }
 
@@ -34,9 +38,10 @@ header {
   text-align: center;
   font-size: 40px;
   font-weight: 900;
-  color: white;
+  color: rgb(243, 241, 241);
   padding: 20px;
 	background: linear-gradient(to left,var(--dark) 47%, var(--light) 100%);
+  font-family: 'Times New Roman', Times, serif;
 
 }
 
